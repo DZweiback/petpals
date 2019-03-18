@@ -8,15 +8,15 @@ from flask import (
     request,
     redirect)
 
-from flask_sqlalchemy import SQLAlchemy
+#from flask_sqlalchemy import SQLAlchemy
 
-app = Flask(__name__)
+#app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///db/pets.sqlite"
+#app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///db/pets.sqlite"
 
-db = SQLAlchemy(app)
+#db = SQLAlchemy(app)
 
-class Pet(db.Model):
+#class Pet(db.Model):
     __tablename__ = 'pets'
 
     id = db.Column(db.Integer, primary_key=True)
@@ -70,5 +70,5 @@ def pals():
 
     return jsonify(trace)
 
-if __name__ == "__main__":
-    app.run()
+#if __name__ == "__main__":
+    #app.run()
